@@ -7,7 +7,7 @@ async def init():
 	await asyncio.sleep(1.5)
 	options = int(input('\n---------------------------------------\n1) Create a new repository\n2) Push an existing repository\n'))
 	if options == 1:
-		git_add = input('git add ')
+		git_add = input('\n---------------------------------------\ngit add ')
 		os.system(f'git add {git_add}')
 
 		git_commit = input('git commit -m ')
@@ -19,7 +19,6 @@ async def init():
 		os.system(f'git remote add origin {git_remote}')
 
 		os.system('git push -u origin main')
-		
 
 asyncio.run(init())
 
